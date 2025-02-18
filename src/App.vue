@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { ref, type Ref } from "vue";
-import { useRouter } from "vue-router";
+import { ref } from "vue";
+import type { Ref } from "vue"; // Move `type` outside the curly brackets
+import { useRoute } from "vue-router";
 import router from "@/router";
 import Home from "@/views/Home.vue";
-import { title } from "process";
 
 const name = ref<string>("Raymond");
 const age = ref<number>(25);
