@@ -21,7 +21,7 @@ const SideMenu: Ref<Array<SideMenuLink>> = ref([
   {name: 'contact', label: 'Contact'},
 ]);
 
-function isRouteActive(routeName: string): {
+function isRouteActive(routeName: string) {
   return route.name === routeName;
 }
 
@@ -31,7 +31,13 @@ function navigate(routeName: string) {
 </script>
 
 <template>
-
+  <header>
+    <div class="w-full bg-black py-7 text-center flex justify-center items-center top-0 fixed">
+      <div class="absolute left-0 right-0 flex justify-center text-white font-bold">
+        <h3>Twende Rides</h3>
+      </div>
+    </div>
+  </header>
   <RouterView />
 </template>
 
