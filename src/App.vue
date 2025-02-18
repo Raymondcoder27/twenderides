@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import { useRoute } from "vue-router";
 
-const name = ref("Raymond"); // Type inference is usually enough
+const name = ref("Raymond");
 const age = ref(25);
 
 const route = useRoute();
