@@ -36,6 +36,8 @@ function navigate(routeName: string) {
       <div class="absolute left-0 right-0 flex justify-center text-white font-bold">
         <h3>Twende Rides</h3>
       </div>
+
+      
     </div>
   </header>
   <RouterView />
