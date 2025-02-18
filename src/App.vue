@@ -1,12 +1,9 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import type { Ref } from "vue";
 import { useRoute } from "vue-router";
-// import router from "@/router";
-// import Home from "@/views/Home.vue";
 
-const name = ref<string>("Raymond");
-const age = ref<number>(25);
+const name = ref("Raymond"); // Type inference is usually enough
+const age = ref(25);
 
 const route = useRoute();
 
@@ -15,7 +12,8 @@ type SideMenuLink = {
   label: string;
 };
 
-const SideMenu: Ref<Array<SideMenuLink>> = ref([
+// Type is inferred as Array<SideMenuLink>
+const SideMenu = ref<SideMenuLink[]>([
   { name: "home", label: "Home" },
   { name: "about", label: "About" },
   { name: "contact", label: "Contact" },
@@ -26,9 +24,10 @@ function isRouteActive(routeName: string) {
 }
 
 function navigate(routeName: string) {
-  router.push({ name: routeName });
+  // router.push({ name: routeName });
 }
 </script>
+
 
 <template>
   <header>
