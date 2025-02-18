@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref, type Ref } from "vue";
+import { ref } from "vue";
+import type { Ref } from "vue";
 import { useRoute } from "vue-router";
 // import router from "@/router";
 // import Home from "@/views/Home.vue";
